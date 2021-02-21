@@ -13,6 +13,13 @@
 		2A4DC06F25E2980300848620 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A4DC06D25E2980300848620 /* Main.storyboard */; };
 		2A4DC07125E2980500848620 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A4DC07025E2980500848620 /* Assets.xcassets */; };
 		2A4DC07425E2980500848620 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A4DC07225E2980500848620 /* LaunchScreen.storyboard */; };
+		2A4DC08225E29C8800848620 /* StatisticsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4DC08125E29C8800848620 /* StatisticsController.swift */; };
+		2AAFDD0725E2A1D700852405 /* StatisticsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAFDD0625E2A1D700852405 /* StatisticsTableViewCell.swift */; };
+		2AAFDD0A25E2A31900852405 /* Statistic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAFDD0925E2A31900852405 /* Statistic.swift */; };
+		2AAFDD0D25E2A33700852405 /* StatisticHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAFDD0C25E2A33700852405 /* StatisticHandler.swift */; };
+		2AAFDD1125E2AD2E00852405 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAFDD1025E2AD2E00852405 /* QuestionViewController.swift */; };
+		2AAFDD1425E2AD7400852405 /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAFDD1325E2AD7400852405 /* QuestionView.swift */; };
+		2AAFDD1725E2B3AD00852405 /* SubmittedAnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAFDD1625E2B3AD00852405 /* SubmittedAnswerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +31,13 @@
 		2A4DC07025E2980500848620 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A4DC07325E2980500848620 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A4DC07525E2980500848620 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A4DC08125E29C8800848620 /* StatisticsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsController.swift; sourceTree = "<group>"; };
+		2AAFDD0625E2A1D700852405 /* StatisticsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsTableViewCell.swift; sourceTree = "<group>"; };
+		2AAFDD0925E2A31900852405 /* Statistic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statistic.swift; sourceTree = "<group>"; };
+		2AAFDD0C25E2A33700852405 /* StatisticHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticHandler.swift; sourceTree = "<group>"; };
+		2AAFDD1025E2AD2E00852405 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		2AAFDD1325E2AD7400852405 /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
+		2AAFDD1625E2B3AD00852405 /* SubmittedAnswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmittedAnswerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +70,54 @@
 		2A4DC06625E2980300848620 /* WouldYouRather - IOS Project */ = {
 			isa = PBXGroup;
 			children = (
-				2A4DC06725E2980300848620 /* AppDelegate.swift */,
-				2A4DC06925E2980300848620 /* SceneDelegate.swift */,
-				2A4DC06B25E2980300848620 /* ViewController.swift */,
-				2A4DC06D25E2980300848620 /* Main.storyboard */,
-				2A4DC07025E2980500848620 /* Assets.xcassets */,
-				2A4DC07225E2980500848620 /* LaunchScreen.storyboard */,
+				2A4DC07F25E2981E00848620 /* Controllers */,
+				2A4DC07E25E2981900848620 /* Views */,
+				2A4DC07D25E2981400848620 /* Models */,
+				2A4DC07C25E2980D00848620 /* Support */,
 				2A4DC07525E2980500848620 /* Info.plist */,
 			);
 			path = "WouldYouRather - IOS Project";
+			sourceTree = "<group>";
+		};
+		2A4DC07C25E2980D00848620 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				2A4DC06725E2980300848620 /* AppDelegate.swift */,
+				2A4DC06925E2980300848620 /* SceneDelegate.swift */,
+				2A4DC07025E2980500848620 /* Assets.xcassets */,
+				2A4DC07225E2980500848620 /* LaunchScreen.storyboard */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		2A4DC07D25E2981400848620 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2AAFDD0925E2A31900852405 /* Statistic.swift */,
+				2AAFDD0C25E2A33700852405 /* StatisticHandler.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2A4DC07E25E2981900848620 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2A4DC06D25E2980300848620 /* Main.storyboard */,
+				2AAFDD0625E2A1D700852405 /* StatisticsTableViewCell.swift */,
+				2AAFDD1325E2AD7400852405 /* QuestionView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2A4DC07F25E2981E00848620 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2A4DC06B25E2980300848620 /* ViewController.swift */,
+				2A4DC08125E29C8800848620 /* StatisticsController.swift */,
+				2AAFDD1025E2AD2E00852405 /* QuestionViewController.swift */,
+				2AAFDD1625E2B3AD00852405 /* SubmittedAnswerViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +190,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AAFDD0A25E2A31900852405 /* Statistic.swift in Sources */,
+				2AAFDD0D25E2A33700852405 /* StatisticHandler.swift in Sources */,
+				2AAFDD0725E2A1D700852405 /* StatisticsTableViewCell.swift in Sources */,
+				2A4DC08225E29C8800848620 /* StatisticsController.swift in Sources */,
 				2A4DC06C25E2980300848620 /* ViewController.swift in Sources */,
 				2A4DC06825E2980300848620 /* AppDelegate.swift in Sources */,
+				2AAFDD1125E2AD2E00852405 /* QuestionViewController.swift in Sources */,
+				2AAFDD1425E2AD7400852405 /* QuestionView.swift in Sources */,
+				2AAFDD1725E2B3AD00852405 /* SubmittedAnswerViewController.swift in Sources */,
 				2A4DC06A25E2980300848620 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
