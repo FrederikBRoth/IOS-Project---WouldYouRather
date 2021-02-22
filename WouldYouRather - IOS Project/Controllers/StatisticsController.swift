@@ -9,14 +9,19 @@ import UIKit
 
 
 class StatisticsController: UITableViewController {
-    var statisticsHandler: StatisticsHandler!
+    let defaults = UserDefaults.standard
     var statistics: [Statistic]!
+    
     @IBOutlet weak var statisticsTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        statisticsHandler = StatisticsHandler()
-        statisticsHandler.testTableView()
-        statistics = statisticsHandler.statistics
+
+        if let data = defaults.object(forKey: "statistics") as? Data {
+            let decoder = JSONDecoder()
+            if let dataArray = try? decoder.decode([Statistic].self, from: data){
+                statistics = dataArray
+            }
+        }
         
         statisticsTableView.dataSource = self
         // Uncomment the following line to preserve selection between presentations
@@ -29,7 +34,6 @@ class StatisticsController: UITableViewController {
 }
 
 extension StatisticsController {
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return statistics.count
     }

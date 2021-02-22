@@ -8,14 +8,28 @@
 import UIKit
 
 class SubmittedAnswerViewController: UIViewController {
-
+    var defaults = UserDefaults.standard
     var answer: String!
+    var question: String!
     
     @IBOutlet weak var answerLable: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         answerLable.text = answer
+        if let data = defaults.object(forKey: "statistics") as? Data {
+            let decoder = JSONDecoder()
+            if var dataArray = try? decoder.decode([Statistic].self, from: data){
+                dataArray.append(Statistic(question: question, answer: answer))
+                let encoder = JSONEncoder()
+                if let encoded = try? encoder.encode(dataArray) {
+                    defaults.set(encoded, forKey: "statistics")
+                    UserDefaults.standard.synchronize()
+                }
+            }
+        }
         // Do any additional setup after loading the view.
+        
+        
     }
     
 

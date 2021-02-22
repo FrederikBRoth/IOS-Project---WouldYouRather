@@ -16,10 +16,12 @@
 		2A4DC08225E29C8800848620 /* StatisticsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4DC08125E29C8800848620 /* StatisticsController.swift */; };
 		2AAFDD0725E2A1D700852405 /* StatisticsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAFDD0625E2A1D700852405 /* StatisticsTableViewCell.swift */; };
 		2AAFDD0A25E2A31900852405 /* Statistic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAFDD0925E2A31900852405 /* Statistic.swift */; };
-		2AAFDD0D25E2A33700852405 /* StatisticHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAFDD0C25E2A33700852405 /* StatisticHandler.swift */; };
 		2AAFDD1125E2AD2E00852405 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAFDD1025E2AD2E00852405 /* QuestionViewController.swift */; };
 		2AAFDD1425E2AD7400852405 /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAFDD1325E2AD7400852405 /* QuestionView.swift */; };
 		2AAFDD1725E2B3AD00852405 /* SubmittedAnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAFDD1625E2B3AD00852405 /* SubmittedAnswerViewController.swift */; };
+		2AE230E325E4059F006FCE2D /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE230E225E4059F006FCE2D /* Question.swift */; };
+		2AE230E725E408BC006FCE2D /* QuestionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE230E625E408BC006FCE2D /* QuestionHandler.swift */; };
+		2AED5D0425E3ECBB00BECF8D /* DatabaseConnecter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AED5D0325E3ECBB00BECF8D /* DatabaseConnecter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,10 +36,12 @@
 		2A4DC08125E29C8800848620 /* StatisticsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsController.swift; sourceTree = "<group>"; };
 		2AAFDD0625E2A1D700852405 /* StatisticsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsTableViewCell.swift; sourceTree = "<group>"; };
 		2AAFDD0925E2A31900852405 /* Statistic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statistic.swift; sourceTree = "<group>"; };
-		2AAFDD0C25E2A33700852405 /* StatisticHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticHandler.swift; sourceTree = "<group>"; };
 		2AAFDD1025E2AD2E00852405 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		2AAFDD1325E2AD7400852405 /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
 		2AAFDD1625E2B3AD00852405 /* SubmittedAnswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmittedAnswerViewController.swift; sourceTree = "<group>"; };
+		2AE230E225E4059F006FCE2D /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		2AE230E625E408BC006FCE2D /* QuestionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionHandler.swift; sourceTree = "<group>"; };
+		2AED5D0325E3ECBB00BECF8D /* DatabaseConnecter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseConnecter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +98,9 @@
 			isa = PBXGroup;
 			children = (
 				2AAFDD0925E2A31900852405 /* Statistic.swift */,
-				2AAFDD0C25E2A33700852405 /* StatisticHandler.swift */,
+				2AED5D0325E3ECBB00BECF8D /* DatabaseConnecter.swift */,
+				2AE230E225E4059F006FCE2D /* Question.swift */,
+				2AE230E625E408BC006FCE2D /* QuestionHandler.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -136,6 +142,8 @@
 			dependencies = (
 			);
 			name = "WouldYouRather - IOS Project";
+			packageProductDependencies = (
+			);
 			productName = "WouldYouRather - IOS Project";
 			productReference = 2A4DC06425E2980300848620 /* WouldYouRather - IOS Project.app */;
 			productType = "com.apple.product-type.application";
@@ -163,6 +171,8 @@
 				Base,
 			);
 			mainGroup = 2A4DC05B25E2980300848620;
+			packageReferences = (
+			);
 			productRefGroup = 2A4DC06525E2980300848620 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -191,13 +201,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				2AAFDD0A25E2A31900852405 /* Statistic.swift in Sources */,
-				2AAFDD0D25E2A33700852405 /* StatisticHandler.swift in Sources */,
 				2AAFDD0725E2A1D700852405 /* StatisticsTableViewCell.swift in Sources */,
 				2A4DC08225E29C8800848620 /* StatisticsController.swift in Sources */,
 				2A4DC06C25E2980300848620 /* ViewController.swift in Sources */,
 				2A4DC06825E2980300848620 /* AppDelegate.swift in Sources */,
 				2AAFDD1125E2AD2E00852405 /* QuestionViewController.swift in Sources */,
+				2AE230E725E408BC006FCE2D /* QuestionHandler.swift in Sources */,
 				2AAFDD1425E2AD7400852405 /* QuestionView.swift in Sources */,
+				2AED5D0425E3ECBB00BECF8D /* DatabaseConnecter.swift in Sources */,
+				2AE230E325E4059F006FCE2D /* Question.swift in Sources */,
 				2AAFDD1725E2B3AD00852405 /* SubmittedAnswerViewController.swift in Sources */,
 				2A4DC06A25E2980300848620 /* SceneDelegate.swift in Sources */,
 			);
